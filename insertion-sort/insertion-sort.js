@@ -4,9 +4,8 @@ const insertionSort = (arrayToSort) => {
     for (let j = 1; j < arrayToSort.length; j++) {
         const key =  arrayToSort[j]
         let i = j-1
-        while ( i>= 0 && arrayToSort[i] > key) {
+        for (;i>= 0 && arrayToSort[i] > key; i--) {
             arrayToSort[i+1] =arrayToSort[i]
-            i--
         }
         arrayToSort[i+1] = key
     }
